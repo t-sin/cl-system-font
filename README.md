@@ -1,5 +1,31 @@
 # cl-system-font
 
+*cl-system-font* is a simple accessor library for font configurations on your systems.
+
+## Requirements
+
+- GNU/Linux or POSIX systems: [fontconfig](https://www.freedesktop.org/wiki/Software/fontconfig/)
+- [TODO] mac OS: none (maybe)
+- [TODO] Windows: none (maybe)
+
+## Usage
+
+To get all fonst installed on your system, do this:
+
+```lisp
+CL-USER> (sysfont:font-info-list)
+...
+```
+
+Font infomation are includes these items:
+
+- font file path (as absolute path)
+- font file format
+- font name
+- font families (this may be multiple values)
+- font styles (this may be multiple values)
+- supported languages (this may be multiple values)
+
 ## References
 
 - UNIX/Linux: fontconfig
