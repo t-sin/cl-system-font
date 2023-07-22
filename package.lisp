@@ -5,13 +5,14 @@
            :font-info-p
            :font-info-pathname
            :font-info-fullname
-           :font-info-styles
-           :font-info-languages
+           :font-info-format
+           :font-info-style
+           :font-info-language
            :font-info-family
 
            :font-info-list))
 (in-package :system-font)
 
 (defstruct font-info
-  pathname fullname styles
-  languages family)
+  pathname fullname format style
+  language family)
