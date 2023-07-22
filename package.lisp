@@ -1,14 +1,16 @@
-(defpackage :system-font.font-info
+(defpackage :system-font
+  (:nicknames :sysfont)
   (:use :cl)
   (:export :font-info
            :font-info-p
-           :make-font-info
            :font-info-pathname
            :font-info-fullname
            :font-info-styles
            :font-info-languages
-           :font-info-family))
-(in-package :system-font.font-info)
+           :font-info-family
+
+           :font-info-list))
+(in-package :system-font)
 
 (defstruct font-info
   pathname fullname styles

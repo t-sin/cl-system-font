@@ -5,6 +5,7 @@
   :depends-on ("uiop"
                "split-sequence")
   :serial t
-  :components ((:file "font-info")
+  :components ((:file "package")
+               #+linux
                (:file "linux")
-               (:file "main")))
+               (:file "api")))
