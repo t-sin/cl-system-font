@@ -15,4 +15,4 @@
 
 (defstruct font-info
   pathname fullname format style
-  language family)
+  language family spacing)

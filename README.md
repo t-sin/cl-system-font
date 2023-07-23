@@ -24,6 +24,7 @@ Font infomation are includes these items:
 - font name
 - font families (this may be multiple values)
 - font styles (this may be multiple values)
+- font spacing (like proportional, monospaced or something)
 - supported languages (this may be multiple values)
 
 ## References
