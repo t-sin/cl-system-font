@@ -3,9 +3,13 @@
   :author "t-sin <shinichi.tanaka45@gmail.com>"
   :license "MIT"
   :depends-on ("uiop"
-               "split-sequence")
+               "split-sequence"
+               #+darwin
+               "com.inuoe.jzon")
   :serial t
   :components ((:file "package")
                #+linux
                (:file "linux")
+               #+darwin
+               (:file "macos")
                (:file "api")))
