@@ -1,11 +1,12 @@
 # cl-system-font
 
 *cl-system-font* is a simple accessor library for font configurations on your systems.
+STATUS: under development
 
 ## Requirements
 
 - GNU/Linux or POSIX systems: [fontconfig](https://www.freedesktop.org/wiki/Software/fontconfig/)
-- [TODO] mac OS: none (maybe)
+- [DOING] mac OS: none (maybe)
 - [TODO] Windows: none (maybe)
 
 ## Usage
