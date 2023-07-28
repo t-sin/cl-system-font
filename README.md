@@ -6,7 +6,7 @@ STATUS: under development
 ## Requirements
 
 - GNU/Linux or POSIX systems: [fontconfig](https://www.freedesktop.org/wiki/Software/fontconfig/)
-- [DOING] mac OS: none (maybe)
+- mac OS: system_profiler (incompletely)
 - [TODO] Windows: none (maybe)
 
 ## Usage
@@ -26,6 +26,7 @@ Font infomation are includes these items:
 - font families (this may be multiple values)
 - font styles (this may be multiple values)
 - font spacing (like proportional, monospaced or something)
+    - this should be which of monospace or not...?
 - supported languages (this may be multiple values)
 
 ## References
@@ -35,6 +36,12 @@ Font infomation are includes these items:
     - `fclist` is described [here](https://www.freedesktop.org/software/fontconfig/fontconfig-devel/fcpatternformat.html)
     - `fclist` format is [`%{?file{%{file}: }}%{-file{%{=unparse}}}`](https://gitlab.freedesktop.org/fontconfig/fontconfig/-/blob/f07d7c67e4de05c25ee391e99ee9368f1136317d/src/fcformat.c#L80)
     - `unparse` is generated [here](https://gitlab.freedesktop.org/fontconfig/fontconfig/-/blob/f07d7c67e4de05c25ee391e99ee9368f1136317d/src/fcname.c#L636)
+- MacOS: system_profiler
+    - https://apple.stackexchange.com/questions/35852/list-of-activated-fonts-with-shell-command-in-os-x
+        - cannot get font spacing and supported languages, in this way
+        - font styles maybe localized in system langauges
+    - Swift's CoreText interface may allow us to get more information
+        - https://developer.apple.com/documentation/coretext
 
 ## Author
 
