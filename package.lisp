@@ -10,7 +10,7 @@
            :font-info-language
            :font-info-family
 
-           :font-info-list))
+           :list-fonts))
 (in-package :system-font)
 
 (defstruct font-info

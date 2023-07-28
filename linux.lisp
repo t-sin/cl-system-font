@@ -61,7 +61,7 @@
   (remove-if (lambda (line) (zerop (length line)))
              (split-sequence:split-sequence #\newline string)))
 
-(defun font-info-list.linux ()
+(defun list-fonts.linux ()
   (loop
     :for line :in (split-fc-list-output-into-lines (run-fc-list))
     :collect (parse-fc-list-output-line line)))

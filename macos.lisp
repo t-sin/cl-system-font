@@ -37,5 +37,5 @@
           :do (make-font-info-from-file font-file #'push-font-info)))
       (nreverse result-font-list))))
 
-(defun font-info-list.macos ()
+(defun list-fonts.macos ()
   (collect-font-info (run-system-profiler)))

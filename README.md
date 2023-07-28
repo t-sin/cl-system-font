@@ -14,7 +14,7 @@ STATUS: under development
 To get all fonst installed on your system, do this:
 
 ```lisp
-CL-USER> (sysfont:font-info-list)
+CL-USER> (sysfont:list-fonts)
 ...
 ```
 
