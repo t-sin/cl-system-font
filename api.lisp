@@ -2,9 +2,9 @@
 
 (defparameter *font-info-list-cache* nil)
 
-(defun font-info-list (&key cache)
+(defun font-info-list (&key (cache t))
   (when (and *font-info-list-cache* cache)
-    *font-info-list-cache*)
+    (return-from font-info-list *font-info-list-cache*))
   (let ((font-info-list #+linux
                         (font-info-list.linux)
                         #+darwin
