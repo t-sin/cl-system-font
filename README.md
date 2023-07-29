@@ -42,6 +42,8 @@ Font infomation are includes these items:
         - font styles maybe localized in system langauges
     - Swift's CoreText interface may allow us to get more information
         - https://developer.apple.com/documentation/coretext
+- Windows
+    - https://superuser.com/questions/760627/how-to-list-installed-font-families
 
 ## Author
 
