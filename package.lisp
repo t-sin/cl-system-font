@@ -9,7 +9,7 @@
            :font-info-style
            :font-info-language
            :font-info-family
-           :font-info-momospace-p
+           :font-info-monospace-p
 
            :list-fonts))
 (in-package :system-font)
