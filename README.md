@@ -6,7 +6,9 @@ STATUS: under development
 ## Requirements
 
 - GNU/Linux or POSIX systems: [fontconfig](https://www.freedesktop.org/wiki/Software/fontconfig/)
+    - tested on Ubuntu 22.04 LTS
 - mac OS: [CoreText API](https://developer.apple.com/documentation/coretext) via a Swift script
+    - tested on macOS 13.5 Ventura 
 - [TODO] Windows: none (maybe)
 
 ## Usage
