@@ -9,10 +9,11 @@
            :font-info-style
            :font-info-language
            :font-info-family
+           :font-info-momospace-p
 
            :list-fonts))
 (in-package :system-font)
 
 (defstruct font-info
   pathname fullname format style
-  language family spacing)
+  language family monospace-p)

@@ -55,7 +55,7 @@
                     :family (parse-fc-list-output-item family)
                     :language (parse-fc-list-output-item language)
                     :style (parse-fc-list-output-item style)
-                    :spacing (to-spacing spacing))))
+                    :monospace-p (eq (to-spacing spacing) :mono))))
 
 (defun split-fc-list-output-into-lines (string)
   (remove-if (lambda (line) (zerop (length line)))
