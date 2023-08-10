@@ -6,7 +6,7 @@ STATUS: under development
 ## Requirements
 
 - GNU/Linux or POSIX systems: [fontconfig](https://www.freedesktop.org/wiki/Software/fontconfig/)
-- mac OS: system_profiler (incompletely)
+- mac OS: CoreText API via a Swift script
 - [TODO] Windows: none (maybe)
 
 ## Usage
