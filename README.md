@@ -1,7 +1,6 @@
 # cl-system-font
 
 *cl-system-font* is a simple accessor library for font configurations on your systems.
-STATUS: under development
 
 ## Requirements
 
@@ -9,7 +8,7 @@ STATUS: under development
     - tested on Ubuntu 22.04 LTS
 - mac OS: [CoreText API](https://developer.apple.com/documentation/coretext) via a Swift script
     - tested on macOS 13.5 Ventura 
-- [TODO] Windows: none (maybe)
+- Windows: [`System.Drawing` API](https://learn.microsoft.com/ja-jp/dotnet/api/system.drawing?view=windowsdesktop-7.0) and [`System.Windows.Media` API](https://learn.microsoft.com/ja-jp/dotnet/api/system.windows.media?view=windowsdesktop-7.0) via a PowerShell script
 
 ## Usage
 
@@ -44,7 +43,8 @@ Font infomation are includes these items:
     - Swift's CoreText interface may allow us to get more information
         - https://developer.apple.com/documentation/coretext
 - Windows
-    - https://superuser.com/questions/760627/how-to-list-installed-font-families
+    - ~~https://superuser.com/questions/760627/how-to-list-installed-font-families~~
+    - https://social.msdn.microsoft.com/Forums/windows/en-US/5b582b96-ade5-4354-99cf-3fe64cc6b53b/determining-if-font-is-monospaced?forum=winforms
 
 ## Author
 
