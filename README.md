@@ -9,6 +9,7 @@
 - mac OS: [CoreText API](https://developer.apple.com/documentation/coretext) via a Swift script
     - tested on macOS 13.5 Ventura 
 - Windows: [`System.Drawing` API](https://learn.microsoft.com/ja-jp/dotnet/api/system.drawing?view=windowsdesktop-7.0) and [`System.Windows.Media` API](https://learn.microsoft.com/ja-jp/dotnet/api/system.windows.media?view=windowsdesktop-7.0) via a PowerShell script
+    - tested on Windows 10 with PowerShell 5.1
 
 ## Usage
 
