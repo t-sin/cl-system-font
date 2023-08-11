@@ -8,6 +8,8 @@
   (let ((font-info-list #+linux
                         (list-fonts.linux)
                         #+darwin
-                        (list-fonts.macos)))
+                        (list-fonts.macos)
+                        #+win32
+                        (list-fonts.windows)))
     (prog1 font-info-list
       (setf *font-info-list-cache* font-info-list))))

@@ -4,7 +4,7 @@
   :license "MIT"
   :depends-on ("uiop"
                "split-sequence"
-               #+(or darwin windows)
+               #+(or darwin win32)
                "com.inuoe.jzon")
   :serial t
   :components ((:file "package")
@@ -12,6 +12,6 @@
                (:file "linux")
                #+darwin
                (:file "macos")
-               #+windows
+               #+win32
                (:file "windows")
                (:file "api")))
