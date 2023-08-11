@@ -1,13 +1,12 @@
 (in-package :system-font)
 
 (defparameter +powershell-command+ "powershell.exe")
-(defparameter +powershell-options+ '())
+(defparameter +powershell-options+ '("-Command" "-"))
 
 (defparameter +powershell-script+ "
 using namespace System.CodeDom.Compiler
 using namespace System.ComponentModel
 using namespace System.Drawing
-using namespace System.Drawing.Interop
 using namespace System.Drawing.Text
 using namespace System.Windows.Media
 
@@ -22,8 +21,8 @@ Function IsFontMonospaced($name) {
     return $false
   }
 
-  $img = New-Object Bitmap(400, 100)
-  $g = [Graphics]::FromImage($img)
+  $img = New-Object System.Drawing.Bitmap(400, 100)
+  $g = [System.Drawing.Graphics]::FromImage($img)
   if ($g -eq $null) {
     return $false
   }
@@ -84,12 +83,21 @@ Function CollectSystemFontInfo() {
 }
 
 Function PrintFontInfoListAsJson($list) {
-  $list | ConvertTo-Json | Write-Output
+  $json = ConvertTo-Json $list
+  Write-Output $json
+}
+
+Function PrepareTypes() {
+  if (-not ('Windows.Media.Fonts' -as [Type])) {
+    Add-Type -AssemblyName 'PresentationCore' 2>$null
+  }
+  if (-not ('System.Drawing' -as [Type])) {
+    Add-Type -AssemblyName 'System.Drawing' 2>$null
+  }
 }
 
 Function Main() {
-  DefineLogFontType
-
+  PrepareTypes
   $list = CollectSystemFontInfo
   PrintFontInfoListAsJson($list)
 }
@@ -101,9 +109,14 @@ Main
   (let ((powershell-command (format nil "~a ~{~a ~}"
                                     +powershell-command+
                                     +powershell-options+)))
-    (with-output-to-string (s)
+    (with-output-to-string (out)
       (with-input-from-string (in +powershell-script+)
-        (uiop:run-program powershell-command :output s :input in)))))
+        (let ((err (with-output-to-string (err)
+                     (uiop:run-program powershell-command
+                                       :input in :output out :error-output err
+                                       :external-format :cp932))))
+         (unless (string= err "")
+           (print err)))))))
 
 (defun make-font-info-from-raw (font-info)
   (make-font-info :pathname (gethash "pathname" font-info)
