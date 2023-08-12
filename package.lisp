@@ -15,5 +15,6 @@
 (in-package :system-font)
 
 (defstruct font-info
-  pathname fullname format style
+  (pathname #P"/" :type pathname :read-only t)
+  fullname format style
   language family monospace-p)
