@@ -49,7 +49,7 @@
 (defun parse-fc-list-output-line (line)
   (destructuring-bind (pathname name format family language style spacing)
       (split-sequence:split-sequence #\: line)
-    (make-font-info :pathname pathname
+    (make-font-info :pathname (pathname pathname)
                     :fullname name
                     :format format
                     :family (parse-fc-list-output-item family)
