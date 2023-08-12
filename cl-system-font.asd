@@ -5,7 +5,9 @@
   :depends-on ("uiop"
                "split-sequence"
                #+(or darwin win32)
-               "com.inuoe.jzon")
+               "com.inuoe.jzon"
+               #+win32
+               "cl-ppcre")
   :serial t
   :components ((:file "package")
                #+linux
