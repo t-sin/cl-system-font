@@ -14,7 +14,11 @@
            :list-fonts))
 (in-package :system-font)
 
+(deftype monospace-p ()
+  (or nil t))
+
 (defstruct font-info
   (pathname #P"/" :type pathname :read-only t)
   fullname format style
-  language family monospace-p)
+  language family
+  (monospace-p nil :type monospace-p :read-only t))
