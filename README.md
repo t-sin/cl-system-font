@@ -22,9 +22,9 @@ CL-USER> (sysfont:list-fonts)
 
 Font infomation are includes these items:
 
-- font file path (as absolute path)
-- font file format
-- font name
+- font file pathname
+- font file format (as a string)
+- font name string
 - font families (this may be multiple values)
 - font styles (this may be multiple values)
 - if this font is monospaced?
