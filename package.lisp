@@ -19,6 +19,7 @@
 
 (defstruct font-info
   (pathname #P"/" :type pathname :read-only t)
-  fullname format style
+  (fullname "" :type string :read-only t)
+  format style
   language family
   (monospace-p nil :type monospace-p :read-only t))
