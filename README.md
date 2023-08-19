@@ -1,5 +1,9 @@
 # cl-system-font
 
+**DON'T USE THIS!!! USE this [font-discovery](https://github.com/Shinmera/font-discovery) library!!!**
+
+-----
+
 *cl-system-font* is a simple accessor library for font configurations on your systems.
 
 ## Requirements
